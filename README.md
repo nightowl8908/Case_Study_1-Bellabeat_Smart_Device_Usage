@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-[1. Ask Phase](#markdown-header-1._ask-phase)
+[1. Ask Phase](#markdown-header-##-1._ask-phase)
 [2. Prepare Phase]
 
 ## ***Scenario:***
