@@ -36,5 +36,8 @@ My goal was to answer the following three questions:
 
 ## 2. Prepare Phase
 
-Bellabeat's Chief Creative Officer pointed me towards a specific data set to use 
+Bellabeat's Chief Creative Officer pointed me towards the following data set to use in my analysis: FitBit Fitness Tracker Data (CC0: Public Domain, dataset made available through Mobius). 
+These Kaggle data sets contains fitness data from thirty fitbit users and are stored in csv files. The csv files are also in long format. For my preparation, cleaning, and analysis of the data, I used RStudio since it is easily able to handle very large csv files containing many types of data. 
+
+After downloading the data sets and storing in the cloud on my RStudio workspace, I wanted to know how the data was organized, as well as its structure. 
     
