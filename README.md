@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-[1. Ask Phase](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/edit/main/README.md##-1.-Ask-Phase)
+[1. Ask Phase](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/edit/main/README.md##-1.-ask-phase)
 [2. Prepare Phase]
 
 ## ***Scenario:***
