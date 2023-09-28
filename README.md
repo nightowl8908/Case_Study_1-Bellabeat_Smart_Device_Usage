@@ -1,5 +1,10 @@
 # Customers' Usage of Bellabeat Smart Devices
 
+## Table of Contents
+
+[1. Ask Phase](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/edit/main/README.md##-1.-Ask-Phase)
+[2. Prepare Phase]
+
 ## ***Scenario:***
 
 You are a junior data analyst working on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused
