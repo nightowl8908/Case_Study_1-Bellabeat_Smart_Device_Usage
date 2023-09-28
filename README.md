@@ -19,6 +19,7 @@ As a junior analyst, I followed the 6 phases of data analytics in order to meet 
 **Share**, and
 **Act**
 
+<a name="Ask"></a>
 ## 1. Ask Phase
 
 Bellabeat's Chief Creative Officer asked me to analyze smart device usage data in order to gain some insights as how to customers use smart devices from other companies. 
