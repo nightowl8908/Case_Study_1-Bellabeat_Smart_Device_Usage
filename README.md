@@ -128,10 +128,10 @@ After using the head functions, I noticed that the specific day and time for eac
 
 ## 5a. Determining Breakdown of Users' Daily Activities and Amount of Sleep
 Now that the data was cleaned, I began my analysis. I started by getting a summary of both the daily_activity and daily_sleep data sets because I wanted to determine the following two things:
-    1. What the breakdown was for how active (or how inactive) users were.
-    2. Whether or not users on average were getting an adequate amount of sleep each night. 
+- What the breakdown was for how active (or how inactive) users were.
+- Whether or not users on average were getting an adequate amount of sleep each night. 
 
-    First, I viewed the summary for both data sets.
+First, I viewed the summary for both data sets.
 
      # Summary of daily_activity Data Set
     
@@ -209,33 +209,50 @@ Next, I wanted to determine the time periods at which users in the study were mo
     ggplot(data=hourly_steps, aes(time,StepTotal)) + geom_col() + labs(x ="Time (hours)", y ="Total Steps Taken (all users)") +            
     theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5)) + ggtitle("Time vs. Total Steps")
 
-
-
-
-
-
 ![Time vs  Total Steps Column Chart](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/1c22b094-a226-40eb-af89-03353ea250fa)
 
+From the chart, I was able to determine that the total steps for all users peaks at around 12:00 - 2:00pm, and then does so again from at roughly 4:00-7:00pm. This makes sense for the 12:00 - 2:00pm time period since people are more mobile at this time for a number reasons, such as to grab lunch from a nearby restaurant or to do some exercise if they are working remotely from home. The same goes for the 4:00 - 7:00pm time period. Users are likely in commute from work back to home during this time period. The really active users may also use this time period to get a work out done in the late afternoon before dinner and bed time.    
 
 ## 5c. Determining the Correlation of Calories with Other Variables
 
+Next, I wanted to know if there was a strong correlation between the number of calories burned and two other variables from the daily_activity data set: "very active minutes" and "total distance". The code and plots for each are below.
+
+    # Determining correlation of Calories to Very Active Minutes
+    ggplot(data=daily_activity, aes(VeryActiveMinutes, Calories)) + geom_point(fill="blue") + stat_cor(method = "pearson", x.label = 500, y.label = 175) + labs(x=”Very Active Minutes",y="Calories") + 
+    ggtitle("Correlation of Calories to Very Active Minutes") + geom_smooth()
+
+
+![image](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/8b95b7dd-d071-4aa9-a20d-391302b67560)
 
 
 
+    # Determining correlation of Calories to TotalDistance
+    ggplot(data=daily_activity, aes(TotalDistance, Calories)) + geom_point(fill="blue") + stat_cor(method = "pearson", x.label = 500, y.label = 175) + labs(x="Total Distance",y="Calories") + 
+    ggtitle("Correlation of Calories to Total Distance") + geom_smooth()
 
 
-
- 
-
+![image](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/548fa8de-7873-4baa-8410-44fef39e4656)
 
 
+# 6. Share Phase: Summary of Conclusions
 
-Next, I wanted to know if there was a strong correlation between users logging in their current weight each day and the two variables daily calories, and daily steps. So, I also calculated the correlation coefficient for these different pairs of variables. 
+From my analysis for this data, I was able to come to the following conclusions:
 
-After some R code, I determined that the stronger correlation was ......
+- The majority of users for this data are not very active since most minutes were counted as "sedentary".
+- The average amount of sleep in hours for users was less than 7 hours, which is less than the amount recommended.
+- The times at which users tend to be most active are 12:00-2:00pm and 4:00 - 7:00pm.
+- There is a positive, moderate relationship between calories burned with both very active minutes and total distance. 
 
 
-Finally, I wanted to know at what time periods of the day smart device users were most active in terms of steps taken and calories burned. So, in order to determine this, 
+# 7. Act Phase
+
+Based on my conclusions, I would give the following recommendations to Bellabeat and its stakeholders:
+
+- Installing Bellabeat smart devices with a reminder app that is able to remind users about the time they need to go to bed in order to get an adequate amount of sleep would be beneficial.
+- Stakeholders should make its smart devices to allows users to track their total distance, the level of intensity at which they are exercising, and the amount of calories that they burn. Allowing users 
+  to see a combination of the effort they are putting in and their reults would be a great motivator for users to continue doing exercise in order to meet their health goals. 
+- Having smart devices come with a function that gives users free, daily tips about health and fitness would be a nice feature and would do well in marketing strategies for the product. These daily health         tips would do especially well for commuters who live and work in major urban areas. If you look on any bus or train in a city like Chicago, you will find most people looking at their smart phone or a            similar electronic device. Thus, smart device users for Bellabeat could use the times of commute in the morning and afternoon (before and after work) to read these bits of advice about health and fitness 
+  and get great value out of them.  
 
 
 
