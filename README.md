@@ -41,24 +41,50 @@ Bellabeat's Chief Creative Officer pointed me towards the following data set to 
 
 ## 3b. How the Data is Organized
 
-After downloading the data sets and storing in the cloud on my RStudio workspace, I wanted to know how the data was organized, as well as its structure. So, I used the structure, head, and n_unique functions in R to better understand this.
+After downloading the data sets and storing in the cloud on my RStudio workspace, I wanted to know how the data was organized, as well as its structure. So, I used the structure and n_unique functions in R to better understand this.
+
+    # Determining structure of each data set
+    
+    str(daily_activity)
+    str(daily_calories)
+    str(daily_intensities)
+    str(daily_sleep)
+    str(daily_steps)
+    str(hourly_calories)
+    str(hourly_intensities)
+    str(hourly_steps)
+    str(weight_logs)
 
 
-# PASTE IMAGE OF R CODE HERE with using head function!! 
+From the structure function, I was able to determine that all the data is in long format since it is organized by time. The data sets where data was tracked each day were also  organized by day, with each day corresponding to a single row. The other data sets where data was tracked and collected hourly had each hour of the specific day corresponding to a single row. I also determined that the various data sets had a combination of numeric. integer, and string types of data stored within them.
 
-From the head function, I was able to determine that all the data is in long format since it is organized by time. The data sets where data was tracked each day were also  organized by day, with each day corresponding to a single row. The other data sets where data was tracked and collected hourly had each hour of the specific day corresponding to a single row. 
+    # Determining the number of FitBit users by counting the number of unique IDs
 
-# PASTE IMAGE OF R CODE HERE with using structure function!!
+    n_distinct(daily_activity$Id)
+    [1] 33
+    n_distinct(daily_calories$Id)
+    [1] 33
+    n_distinct(daily_intensities$Id)
+    [1] 33
+    n_distinct(daily_sleep$Id)
+    [1] 24
+    n_distinct(daily_steps$Id)
+    [1] 33
+    n_distinct(hourly_calories$Id)
+    [1] 33
+    n_distinct(hourly_intensities$Id)
+    [1] 33
+    n_distinct(hourly_steps$Id)
+    [1] 33
+    n_distinct(weight_logs$Id)
+    [1] 8
 
-From the structure function, I determined that the various data sets had a combination of numeric. integer, and string types of data stored within them.
 
-# PASTE IMAGE OF R CODE HERE with using n_unique function!!
-
-Finally, from the unique function, I determined that there was a total of 31 unique ID numbers within the different data sets. This means that there was a total of 31 different FitBit users' information collected, which tracked their sleep times, steps taken, calories burned, and so on. 
+Finally, from the n_unique function, I determined that there was a total of 33 unique ID numbers for all the different data sets except for two of them. This means that there was a total of 33 different FitBit users' information collected, which tracked their steps taken, calories burned, and so on. However, the data sets that users' logging their weights on a given day and their daily sleep had only 8 and 24 unique ID numbers respectively.
 
 ## 3c. Credibility of the Data
 
-Since there are only a total of 31 users whose information was collected for the data, it is likely that there may be some level of sampling bias for this data. Not only that, but there is also no identifiable, demographic information about our users. Therefore, we have no way of knowing if our sample represents the overall population of FitBit's users. One of two things might have occcurred. Most users may have refused to participate in the study, which then lead to non-response bias. Or, this data could have undercoverage bias if certain members of the population are not represented as much as they should be. 
+Since there are only a total of 33 users whose information was collected for the data, it is likely that there may be some level of sampling bias for this data. Not only that, but there is also no identifiable, demographic information about our users. Therefore, we have no way of knowing if our sample represents the overall population of FitBit's users. One of two things might have occcurred. Most users may have refused to participate in the study, which then lead to non-response bias. Or, this data could have undercoverage bias if certain members of the population are not represented as much as they should be. 
 
 Finally, this data was not collected recently. It was done over a few months back in the year 2016. 
 
@@ -72,22 +98,139 @@ To clean and analyze the data, I decided to use RStudio. RStudio is able to work
 
 After using the head functions, I noticed that the specific day and time for each data sets where information of users was tracked hourly had both organized into one column. So, I reformatted these in those files and made two, new columns called 'date' and 'time'. I also made a new column in the daily sleep file called 'ActivityDay' that contained only the specific day in which the user slept. I did this because all of the other files which tracked users' activities on a daily basis had the time column named 'ActivityDay' and only told the specific day.  
 
-# PASTE IMAGE OF R CODE HERE where you reformatted the dates!!
+    # Cleaning of each data set
+    # Reformatting dates
+    #daily_sleep
+    daily_sleep$SleepDay = as.POSIXct(daily_sleep$SleepDay, format = "%m/%d/%Y  %I:%M:%S %p",tz=Sys.timezone())
+    daily_sleep$ActivityDay <- format(daily_sleep$SleepDay, format = "%m/%d/%Y")
+ 
+    # hourly_calories
+    hourly_calories$ActivityHour = as.POSIXct(hourly_calories$ActivityHour, format = "%m/%d/%Y  %I:%M:%S %p",tz=Sys.timezone())
+    hourly_calories$date <- format(hourly_calories$ActivityHour, format = "%m/%d/%Y")
+    hourly_calories$time <- format(hourly_calories$ActivityHour, format = "%H/%M/%S")
 
+    # hourly_intensities
+    hourly_intensities$ActivityHour = as.POSIXct(hourly_intensities$ActivityHour, format = "%m/%d/%Y  %I:%M:%S %p",tz=Sys.timezone())
+    hourly_intensities$date <- format(hourly_intensities$ActivityHour, format = "%m/%d/%Y")
+    hourly_intensities$time <- format(hourly_intensities$ActivityHour, format = "%H/%M/%S")
 
-## 4c. Merging of Data Sets
+    # hourly_steps
+    hourly_steps$ActivityHour = as.POSIXct(hourly_steps$ActivityHour, format = "%m/%d/%Y  %I:%M:%S %p",tz=Sys.timezone())
+    hourly_steps$date <- format(hourly_steps$ActivityHour, format = "%m/%d/%Y")
+    hourly_steps$time <- format(hourly_steps$ActivityHour, format = "%H/%M/%S")
 
-I was curious about whether there was a stronger correlation between users' daily activities with the duration of their sleep. So, I decided to merge the data set about users' daily sleep times with a few other data sets that collected information about their daily lives over the course of the study. These data sets included daily_calories, daily_intensities, daily_steps, and daily_activity. 
-
-# PASTE IMAGE OF R CODE HERE where you merged the different data sets!!
-
+    # weight_logs
+    weight_logs$Date = as.POSIXct(weight_logs$Date, format = "%m/%d/%Y  %I:%M:%S %p",tz=Sys.timezone())
+    weight_logs$date <- format(weight_logs$Date, format = "%m/%d/%Y")
+    weight_logs$time <- format(weight_logs$Date, format = "%H/%M/%S")
 
 # 5. Analyze Phase
 
-## 5a. Determining the Correlation of Sleep Times with Other Variables
+## 5a. Determining Breakdown of Users' Daily Activities and Amount of Sleep
+Now that the data was cleaned, I began my analysis. I started by getting a summary of both the daily_activity and daily_sleep data sets because I wanted to determine the following two things:
+    1. What the breakdown was for how active (or how inactive) users were.
+    2. Whether or not users on average were getting an adequate amount of sleep each night. 
 
-Now the data was cleaned, I began my analysis. I started with determining  
+    First, I viewed the summary for both data sets.
 
+     # Summary of daily_activity Data Set
+    
+       Id            ActivityDate         TotalSteps    TotalDistance   
+     Min.   :1.504e+09   Length:940         Min.   :    0   Min.   : 0.000  
+     1st Qu.:2.320e+09   Class :character   1st Qu.: 3790   1st Qu.: 2.620  
+     Median :4.445e+09   Mode  :character   Median : 7406   Median : 5.245  
+     Mean   :4.855e+09                      Mean   : 7638   Mean   : 5.490  
+     3rd Qu.:6.962e+09                      3rd Qu.:10727   3rd Qu.: 7.713  
+     Max.   :8.878e+09                      Max.   :36019   Max.   :28.030  
+     
+     TrackerDistance  LoggedActivitiesDistance VeryActiveDistance
+     Min.   : 0.000   Min.   :0.0000           Min.   : 0.000    
+     1st Qu.: 2.620   1st Qu.:0.0000           1st Qu.: 0.000    
+     Median : 5.245   Median :0.0000           Median : 0.210    
+     Mean   : 5.475   Mean   :0.1082           Mean   : 1.503    
+     3rd Qu.: 7.710   3rd Qu.:0.0000           3rd Qu.: 2.053    
+     Max.   :28.030   Max.   :4.9421           Max.   :21.920    
+     
+     ModeratelyActiveDistance LightActiveDistance SedentaryActiveDistance
+     Min.   :0.0000           Min.   : 0.000      Min.   :0.000000       
+     1st Qu.:0.0000           1st Qu.: 1.945      1st Qu.:0.000000       
+     Median :0.2400           Median : 3.365      Median :0.000000       
+     Mean   :0.5675           Mean   : 3.341      Mean   :0.001606       
+     3rd Qu.:0.8000           3rd Qu.: 4.782      3rd Qu.:0.000000       
+     Max.   :6.4800           Max.   :10.710      Max.   :0.110000       
+     
+     VeryActiveMinutes FairlyActiveMinutes LightlyActiveMinutes SedentaryMinutes
+     Min.   :  0.00    Min.   :  0.00      Min.   :  0.0        Min.   :   0.0  
+     1st Qu.:  0.00    1st Qu.:  0.00      1st Qu.:127.0        1st Qu.: 729.8  
+     Median :  4.00    Median :  6.00      Median :199.0        Median :1057.5  
+     Mean   : 21.16    Mean   : 13.56      Mean   :192.8        Mean   : 991.2  
+     3rd Qu.: 32.00    3rd Qu.: 19.00      3rd Qu.:264.0        3rd Qu.:1229.5  
+     Max.   :210.00    Max.   :143.00      Max.   :518.0        Max.   :1440.0  
+    
+        Calories   
+     Min.   :   0  
+     1st Qu.:1828  
+     Median :2134  
+     Mean   :2304  
+     3rd Qu.:2793  
+     Max.   :4900  
+
+When looking at the summary for the daily activity data set, I found that both the maximum and mean number of minutes for sedentary minutes were both significantly higher than the other types of minutes. This told me that users, on average, were not particularly active in their day to day.
+
+Then, I wrote code to perform a quick summary for the daily_sleep data set in R. 
+
+     # Summary of daily_sleep Data Set
+       Id               SleepDay                      TotalSleepRecords
+     Min.   :1.504e+09   Min.   :2016-04-12 00:00:00.00   Min.   :1.000    
+     1st Qu.:3.977e+09   1st Qu.:2016-04-19 00:00:00.00   1st Qu.:1.000    
+     Median :4.703e+09   Median :2016-04-27 00:00:00.00   Median :1.000    
+     Mean   :5.001e+09   Mean   :2016-04-26 12:40:05.80   Mean   :1.119    
+     3rd Qu.:6.962e+09   3rd Qu.:2016-05-04 00:00:00.00   3rd Qu.:1.000    
+     Max.   :8.792e+09   Max.   :2016-05-12 00:00:00.00   Max.   :3.000    
+     
+     TotalMinutesAsleep TotalTimeInBed  ActivityDay       
+     Min.   : 58.0      Min.   : 61.0   Length:413        
+     1st Qu.:361.0      1st Qu.:403.0   Class :character  
+     Median :433.0      Median :463.0   Mode  :character  
+     Mean   :419.5      Mean   :458.6                     
+     3rd Qu.:490.0      3rd Qu.:526.0                     
+     Max.   :796.0      Max.   :961.0 
+
+        mean(daily_sleep$TotalMinutesAsleep/60)
+        6.991122
+
+The piece of information that was of interest to me in this data was the average amount of sleep users had each night. According to the summary, the average in minutes was 419.5. When I converted this to hours, it was a little less than 7 hours. This piece of information is concerning because it tells me that many of the users in this study were not getting a recommended 8 or more hours of sleep each night. 
+
+## 5b. Determining Time Periods at Which Users Were Most Active
+
+Next, I wanted to determine the time periods at which users in the study were most active. I decided to utlize the hourly_steps data set and made a column chart comparing the hours of the day with the total steps taken for all users.   
+
+    #Determining times of the day at which users are typically are more active
+    ggplot(data=hourly_steps, aes(time,StepTotal)) + geom_col() + labs(x ="Time (hours)", y ="Total Steps Taken (all users)") +            
+    theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5)) + ggtitle("Time vs. Total Steps")
+
+
+
+
+## 5c. Determining the Correlation of Calories with Other Variables
+
+
+
+
+
+
+
+ 
+
+
+
+
+Next, I wanted to know if there was a strong correlation between users logging in their current weight each day and the two variables daily calories, and daily steps. So, I also calculated the correlation coefficient for these different pairs of variables. 
+
+After some R code, I determined that the stronger correlation was ......
+
+
+Finally, I wanted to know at what time periods of the day smart device users were most active in terms of steps taken and calories burned. So, in order to determine this, 
 
 
 
