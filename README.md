@@ -41,7 +41,7 @@ Bellabeat's Chief Creative Officer pointed me towards the following data set to 
 
 ## 3b. How the Data is Organized
 
-After downloading the data sets and storing in the cloud on my RStudio workspace, I wanted to know how the data was organized, as well as its structure. So, I used the structure and n_unique functions in R to better understand this.
+After downloading the data sets and storing in the cloud on my RStudio workspace, I wanted to know how the data was organized, as well as its structure. So, I used the structure and n_distinct functions in R to better understand this.
 
     # Determining structure of each data set
     
@@ -80,11 +80,11 @@ From the structure function, I was able to determine that all the data is in lon
     [1] 8
 
 
-Finally, from the n_unique function, I determined that there was a total of 33 unique ID numbers for all the different data sets except for two of them. This means that there was a total of 33 different FitBit users' information collected, which tracked their steps taken, calories burned, and so on. However, the data sets that users' logging their weights on a given day and their daily sleep had only 8 and 24 unique ID numbers respectively.
+Finally, from the n_distinct function, I determined that there was a total of 33 unique ID numbers for all the different data sets except for two of them. This means that there was a total of 33 different FitBit users' information collected, which tracked their steps taken, calories burned, and so on. However, the data sets that users' logging their weights on a given day and their daily sleep had only 8 and 24 unique ID numbers respectively.
 
 ## 3c. Credibility of the Data
 
-Since there are only a total of 33 users whose information was collected for the data, it is likely that there may be some level of sampling bias for this data. Not only that, but there is also no identifiable, demographic information about our users. Therefore, we have no way of knowing if our sample represents the overall population of FitBit's users. One of two things might have occcurred. Most users may have refused to participate in the study, which then lead to non-response bias. Or, this data could have undercoverage bias if certain members of the population are not represented as much as they should be. 
+Since there are only a total of 33 users whose information was collected for the data, it is likely that there may be some level of sampling bias for this data. There are no pieces of identifiable, demographic information about our users. Therefore, we have no way of knowing if our sample represents the overall population of FitBit's users. One of two things might have occcurred. Most users may have refused to participate in the study, which then lead to non-response bias. Or, this data could have undercoverage bias if certain members of the population were not represented as much as they should be. 
 
 Finally, this data was not collected recently. It was done over a few months back in the year 2016. 
 
