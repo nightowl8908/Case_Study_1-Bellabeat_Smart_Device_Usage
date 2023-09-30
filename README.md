@@ -212,6 +212,11 @@ Next, I wanted to determine the time periods at which users in the study were mo
 
 
 
+
+
+![Time vs  Total Steps Column Chart](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/1c22b094-a226-40eb-af89-03353ea250fa)
+
+
 ## 5c. Determining the Correlation of Calories with Other Variables
 
 
