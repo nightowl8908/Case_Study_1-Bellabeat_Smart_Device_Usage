@@ -209,7 +209,8 @@ Next, I wanted to determine the time periods at which users in the study were mo
     ggplot(data=hourly_steps, aes(time,StepTotal)) + geom_col() + labs(x ="Time (hours)", y ="Total Steps Taken (all users)") +            
     theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5)) + ggtitle("Time vs. Total Steps")
 
-![Time vs  Total Steps Column Chart](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/1c22b094-a226-40eb-af89-03353ea250fa)
+![Time vs  Total Steps Column Chart](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/ec0aa626-427d-4dea-8bc8-67b6104dfd64)
+
 
 From the chart, I was able to determine that the total steps for all users peaks at around 12:00 - 2:00pm, and then does so again from at roughly 4:00-7:00pm. This makes sense for the 12:00 - 2:00pm time period since people are more mobile at this time for a number reasons, such as to grab lunch from a nearby restaurant or to do some exercise if they are working remotely from home. The same goes for the 4:00 - 7:00pm time period. Users are likely in commute from work back to home during this time period. The really active users may also use this time period to get a work out done in the late afternoon before dinner and bed time.    
 
@@ -222,7 +223,8 @@ Next, I wanted to know if there was a strong correlation between the number of c
     ggtitle("Correlation of Calories to Very Active Minutes") + geom_smooth()
 
 
-![image](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/8b95b7dd-d071-4aa9-a20d-391302b67560)
+![Scatterplot - Correlation of Calories to Very Active Minutes](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/f7fff51a-73ee-4e4f-a7ad-ddce8bb4dd68)
+
 
 
 
@@ -231,7 +233,8 @@ Next, I wanted to know if there was a strong correlation between the number of c
     ggtitle("Correlation of Calories to Total Distance") + geom_smooth()
 
 
-![image](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/548fa8de-7873-4baa-8410-44fef39e4656)
+![Scatterplot - Correlation of Calories to Total Distance](https://github.com/nightowl8908/Case_Study_1-Bellabeat_Smart_Device_Usage/assets/146215343/99b0abbd-3fdc-47b8-aaba-9bb32d2de7e9)
+
 
 
 # 6. Share Phase: Summary of Conclusions
