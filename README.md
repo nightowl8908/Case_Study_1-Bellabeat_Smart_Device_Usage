@@ -34,7 +34,7 @@ My goal was to answer the following three questions:
 
 # 3. Prepare Phase
 
-## 3a. Data That was Used and Analyzed
+## 3a. Data that was Used and Analyzed
 
 Bellabeat's Chief Creative Officer pointed me towards the following data set to use in my analysis: FitBit Fitness Tracker Data (CC0: Public Domain, dataset made available through Mobius). These Kaggle data sets are all stored in csv files. In total, there are 18 of them.  The data is all open source, which means is freely available to anyone in the public and can be edited as needed by those who analyze and use it. So, permission from the original owner of the data is not required to use it for one's own purposes.  
 
