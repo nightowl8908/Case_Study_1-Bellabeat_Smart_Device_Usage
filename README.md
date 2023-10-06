@@ -1,15 +1,17 @@
 # Data Analyst Portfolio
-<img align = "left" width = "120" height = "120" src = "https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/c190c5f1-ac58-4e73-93fa-b10cde5bffe7"
+
+<img align = "left" width = "180" height = "180" src = "https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/c190c5f1-ac58-4e73-93fa-b10cde5bffe7">
 
 ## Introduction
 
-Hello! My name is Wyatt Perkins and welcome to my portfolio that showcases the data analysis projects I have worked on. 
+Hello! My name is Wyatt Perkins and welcome to my portfolio that showcases the data analysis projects I have completed. 
 
-In this repository, you will find a find a number of folders. And, each folder possesses a project that I completed in which I demonstrate my use of any of the following:
-    - Data cleaning and analysis with R programming
-    - Data cleaning and analysis with Microsoft Excel
-    - Data visualizations using R programming and Microsoft BI
-    - And others!
+In this repository, you will find a find a number of folders. Each folder possesses a project that I completed in which I demonstrate my use of the following:
+    
+ - Data cleaning and analysis with R programming
+- Data cleaning and analysis with Microsoft Excel
+- Data visualizations using R programming and Microsoft BI
+- And others!
 
 In the sections of this README file that follow, I will give a brief summary of the path that I walked to becoming a data analyst, as well as providing a description of each project that is contained within this portfolio.
 
