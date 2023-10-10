@@ -45,4 +45,43 @@ There were 208 PS4 game title rows that had no year the game was released, as we
 
 ## 4. Analyze Phase
 
+Now that the data processing was complete, it was time to begin the analysis. So, the following things were used in order to have more concrete answers to stakeholders' questions:
+
+1. A pivot table was created for each data set to determine trends for genre of video games sold and the total number of copies games sold for each genre.
+2. To help visulize these data trends, a bar chart was created that showed the top genres in total games sold from each gaming console data set.
+
+![image](https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/6fb78b89-7797-4b5b-8629-8c26565ed13a)
+
+![image](https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/8f7cef6f-fb02-41b6-92dc-4c3206d2b9d0)
+
+![image](https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/93cbfd09-473a-4fd7-a38f-1fc6f80ebf82)
+
+3. Another pivot table was created for each data set to determine trends when comparing the publishers and the total number of copies for games sold.
+4. To help visualize these data trends, another bar chart was created that showed the publishers who sold the most number of games from each gaming console.
+
+![image](https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/867190cc-950a-445e-8e63-755b0261030a)
+
+![image](https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/f252f503-3440-49e3-be59-19d8d5b206c5)
+
+![image](https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/241a911e-c4bb-4226-8ca7-9744fab266bd)
+   
+5. Finally, a third pivot table was created for each data set that gave a breakdown of the different publishers for video games, every genre of video games that each publisher sold, and the total sum of games sold that come from each genre. 
+
+## 5. Share Phase 
+After analyzing data from the pivot tables and bar charts, the following conclusions can be drawn:
+
+- The top 3 genres by total number of game copies sold for the Nintendo Switch (from #1 to #3) were Platformer, Role-Playing, and Action-adventure.
+- The top 3 genres by total number of game copies sold for the Playstation 4 (from #1 to #3) were Action, Shooter, and Sports.  
+- The top 3 genres by total number of game copies sold for the XBOX1 (from #1 to #3) were Shooter, Action, and Sports.
+- The top publishers of games for the Nintendo Switch was Nintendo at #1 (by a wide margin) and then second with the Pokemon Company.
+- The top publishers of games for the Playstation 4 (from #1 to #3) were Activision, Ubisoft, and Electronic Arts.
+- The top publishers of games for the XBOX1 (from #1 to #3) were Microsoft Studios, Activision, and Ubisoft.
+
+## 6. Act Phase
+
+Based on the trends found above, an analyst could give the following recommendations to a new video game developer wishing to create a new game for the martket:
+
+- The company should start creating an action genre video game. This genre was in the one of the top 2 spots for most video games sold for 2 of the 3 biggest gaming consoles. So, developing an video game that would fall under the action genre is the safest bet in order to create a profit.
+- The company should develop their video game to be played on all 3 different gaming consoles. The rationale for this is that the majority of gamers do not possess all 3 of the current, major consoles. So, developing and marketing the game to be able to played on any of those consoles would potentially lead to a much greater profit for the new video game developer.
+- Finally, it is recommended that the new developer goes to the following publishers in order to be able to sell a great many copies of their game and make a larger profit: Nintendo for the Nintendo Switch console, Activision for the Playstation 4 console, and Microsoft Studios for the XBOX1 console. All of these publishers have lots of experience selling action genre game titles and have had many successes doing so.   
 
