@@ -19,7 +19,7 @@ Using these metrics above, you search for the data sets that possess the informa
 3.	XBOX1 Games Data: Shows data for the top 613 games sold in terms of their overall rank, year released, genre, publisher, and units in millions sold (both globally and in different regions)
 All data sets used were in csv file format and could be found on the Kaggle website. Furthermore, all data sets used were public data, which means they can be downloaded, copied, and utilized without restriction.
 
-# COMMENT ON DATA'S CREDIBILITY HERE!!
+For most of the data sets, the sample size of game titles was pretty large. However, this was not the case for Nintendo Switch Games data. This data set was significantly smaller than the others. This could mean then that the sample of game titles does not represent the overall population compared to the Playstation 4 and XBOX1 game titles. Furthermore, the data for all game titles from each console is unfortunately not as current as it could be. The latest data of game titles was in 2022, while other data sets stop at 2020. 
 
 ### 2c. How Each Data Set is Organized
 Each csv file used for this analysis was in long format. This is because each row for each data set corresponds to a unique game title that was sold.
