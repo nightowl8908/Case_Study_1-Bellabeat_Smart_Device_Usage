@@ -33,8 +33,8 @@ To help complete the analysis by comparing different genres, publishers, and gam
 ### 3c. Removing Duplicate Rows for Game Titles and Deleting Rows with Blank Information
 For every data set, each row corresponded to a single, unique game title. However, each data set needed to be checked for duplicate rows that had the same video game title. And, some were found to have some duplicate rows. 
 1. 3 duplicate rows were found for video game titles in the PS4 Game Sales file. Those duplicate rows in the data set were then removed.
-2. 1 duplicate row for game titles in xbox1 games file was found and removed.
-3. No duplicates rows for game title was found in the PC Games spreadsheet file.
+2. 1 duplicate row for game titles in XBOX1 games file was found and removed.
+3. No duplicates rows for game titles were found in the Nintendo Switch games spreadsheet file.
 
 There were 208 PS4 game title rows that had no year the game was released, as well as not having the name of the publisher in its information for each game when a search was done by organizing the data sheet in order by publisher. So, these data rows were deleted. 
 
