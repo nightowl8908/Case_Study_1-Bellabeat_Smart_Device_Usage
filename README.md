@@ -27,7 +27,7 @@ This project focused on me using data provided by smart fitness devices to deter
 
 ## Project #2: Analysis of Video Game Data for Different Gaming Platforms
 
-For this project, I was interested in determining and analyzing the major trends for different video games sold on various gaming consoles. I used Microsoft Excel for my analysis and Power BI to create my visualzations. This analysis could be used to give business recommendations to a small gaming company looking to grow their business model.
+For this project, I was interested in determining and analyzing the major trends for different video games sold on various gaming consoles. I used Microsoft Excel for my analysis and Power BI to create my visualizations. This analysis could be used to give business recommendations to a small gaming company looking to grow their business model.
 
 
 
