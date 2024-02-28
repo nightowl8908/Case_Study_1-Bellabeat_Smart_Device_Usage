@@ -31,7 +31,7 @@ For this project, I was interested in determining and analyzing the major trends
 
 ## Project #3: Reports & Dashboards on Exercise & Fitness Data
 
-This project involved me taking my own exercise and fitness data and creating both reports and dashboards out of them using Microsoft Excel and Power BI. The reports are more static, but the summary statistics on each report page update when new data is added to the data tables. The dashboards are more dynamic in that they have a slicer that filters data shown on all the charts by date. They also have drill-down functionality. 
+This project involved me taking my own exercise and fitness data to create both reports and dashboards out of them using Microsoft Excel and Power BI. The reports are more static, but the summary statistics on each report page update when new data is added to the data tables. The dashboards are more dynamic in that they have a slicer that filters data shown on all the charts by date. They also have drill-down functionality. 
 
 
 
