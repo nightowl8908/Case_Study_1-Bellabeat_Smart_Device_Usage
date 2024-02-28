@@ -1,6 +1,6 @@
 # Data Analyst Portfolio
 
-<img align = "right" width = "225" height = "225" src = "https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/c190c5f1-ac58-4e73-93fa-b10cde5bffe7">
+<img align = "right" width = "200" height = "200" src = "https://github.com/nightowl8908/Data-Analysis-Portfolio/assets/146215343/c190c5f1-ac58-4e73-93fa-b10cde5bffe7">
 
 ## Introduction
 
